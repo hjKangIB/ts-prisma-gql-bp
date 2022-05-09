@@ -1,24 +1,7 @@
 // const { ApolloServer, gql } = require('apollo-server');
 
-import { gql } from 'apollo-server';
-import { objectType, inputObjectType, arg, intArg, nonNull } from 'nexus';
-
-export const User = objectType({
-  name: 'User',
-  definition(t) {
-    t.int('id');
-    t.string('email');
-    t.string('name');
-    t.string('password');
-  },
-});
-
-const UserWhereUniqueInput = inputObjectType({
-  name: 'UserWhereUniqueInput',
-  definition(t) {
-    t.int('id');
-  },
-});
+import { objectType, intArg, nonNull } from 'nexus';
+import { User } from '../graphql';
 
 export const Query = objectType({
   name: 'Query',

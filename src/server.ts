@@ -3,7 +3,7 @@ import path from 'path';
 import { makeSchema } from 'nexus';
 import { context } from './context';
 
-import * as types from './index';
+import * as types from './graphql';
 
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
